@@ -1,0 +1,30 @@
+<?php
+/* @var Jayanka\HelloWorld\Block\Hello $block */
+$cars = $block->getAllBook();
+
+?>
+
+<?php if (count($cars) > 0): ?>
+ <table border="1">
+      <tr>
+         <th><?= __("id_column") ?></th>
+         <th><?= __("FirstName") ?></th>
+         <th><?= __("LastName") ?></th>
+         <th><?= __("Mobile") ?></th>
+         <th><?= __("BookingTime") ?></th>
+         
+        </tr>
+       <?php foreach ($cars as $car): ?>
+            <tr>
+               <td><?= $car['id_column'] ?></td>
+               <td><?= $car['FirstName']?></td>
+              <td><?= $car['LastName'] ?></td>
+              <td><?= $car['Mobile'] ?></td>
+              <td><?= $car['BookingTime'] ?></td>
+
+           </tr>
+      <?php endforeach; ?>
+    </table>
+<?php else: ?>
+ <h1><?= __("You have no  saved data:(") ?></h1>
+<?php endif; ?>

@@ -1,0 +1,26 @@
+<h1><b>Booking page <b></h1>
+
+<form method="post" action="<?= $block->getFormAction() ?>">
+<label class="label" for="FirstName"><span><?php  echo __('FirstName') ?></span></label> <br>
+<input name="FirstName" title="<?php  echo __('FirstName') ?>"  type="text" data-validate="{required:true}" required> <br>
+<br>
+<label class="label" for="LastName"><span><?php  echo __('LastName') ?></span></label> <br>
+<input name="LastName" title="<?php  echo __('LastName') ?>"  type="text" data-validate="{required:true}" required> <br>
+
+ <br>
+
+    <label class="label" for="Mobile"><span><?php  echo __('Mobile') ?></span></label>
+    <input name="Mobile" title="<?php  echo __('Mobile') ?>"  type="number" data-validate="{required:true}" required> <br>
+    <!-- <select id="cars">
+  <option value="volvo">+91</option>
+  <option value="saab">+92</option>
+  <option value="opel">+93</option>
+  <option value="audi">+94</option>
+</select> <br>-->
+<br>
+    <label class="label" for="BookingTime" ><span><?php  echo __('BookingTime') ?></span></label>
+    <input name="BookingTime" title="<?php  echo __('BookingTime') ?>"type="text" data-validate="{required:true}" required > <br>
+    
+<br>
+    <input type="submit" value="Submit">
+</form>
